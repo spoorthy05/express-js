@@ -1,0 +1,49 @@
+{
+  "name": "express-app",
+  "version": "1.0.0",
+  "description": "Express+Postgres",
+  "main": "index.js",
+  "scripts": {
+    "start": "run-p start:api start:app",
+    "build": "webpack --mode production",
+    "start:api": "node api-server.js",
+    "start:app": "webpack-dev-server --mode development --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "babel-preset-env",
+      "babel-preset-react"
+    ],
+    "plugins": [
+      "babel-plugin-transform-class-properties"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "7.1.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.3.1",
+    "autoprefixer": "7.1.6",
+    "postcss-flexbugs-fixes": "3.2.0",
+    "postcss-loader": "2.0.8"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "npm-run-all": "^4.1.5",
+    "pg": "^7.10.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
